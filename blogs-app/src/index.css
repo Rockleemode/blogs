@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Nunito:ital,wght@0,400;1,300&display=swap');
+
+body{
+  font-family:'Maven Pro', sans-serif;
+  background-color: #ebf3f2;
+}
+
+.nav-bar{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width:600px;
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+.nav-bar h1{
+  color: #666363;
+}
+
+.nav-bar .links{
+  margin-left: auto;
+}
+
+.nav-bar a{
+  margin-left: 16px;
+  padding: 6px;
+  text-decoration: none;
+  color: black;
+} 
+
+.nav-bar a:hover{
+  color: #888;
+}
+
+.content{
+  max-width: 600px;
+  margin: 20px auto;
+}
+/* blogs list styles */
+
+.preview-blogs{
+  padding: 5px 16px;
+  margin: 10px 0;
+  border-bottom: 1px solid grey;
+}
+
+.preview-blogs h2{
+  color: #373737;
+}
+
+.preview-blogs:hover{
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.footer{
+  text-align: center;
+}
