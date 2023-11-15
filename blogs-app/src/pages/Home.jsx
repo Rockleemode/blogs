@@ -1,19 +1,14 @@
-import { useState } from "react";
+import {} from "react";
+import BlogList from "./BlogList";
+import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-    const [blogs] = useState([
-        {title:"The Dawn", author:"luffy", body:"lorem ipsum ligma ballz", id:1},
-        {title:"The Dusk", author:"Zoro", body:"lorem ipsum ligma ballz", id:2},
-        {title:"The Twilight", author:"Sanji", body:"lorem ipsum ligma ballz", id:3},
-    ])
+    const { data:blogs, isLoading, error} = useFetch("http://localhost:8000/blogs");
     return ( 
         <div className="home">
-            {blogs.map(blog =>(
-                <div className="preview-blogs" key={blog.id}>
-                    <h2>{blog.title}</h2>
-                    <p>written by sir {blog.author}</p>
-                </div>
-            ))}
+            {error && <h2 style={{color:"rgb(247, 66, 66)"}}>{error}</h2>}
+            {isLoading && "loading..."}
+           {blogs && <BlogList blogs={blogs}/>}
         </div>
      );
 }

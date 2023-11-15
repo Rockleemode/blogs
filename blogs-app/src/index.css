@@ -5,6 +5,7 @@ body{
   background-color: #ebf3f2;
 }
 
+ /* navaigation styles */
 .nav-bar{
   padding: 20px;
   display: flex;
@@ -30,7 +31,20 @@ body{
 } 
 
 .nav-bar a:hover{
-  color: #888;
+ color: grey;
+}
+
+.nav-bar a:nth-child(2){
+  background-color: grey;
+  color:white;
+  border-radius: 4px;
+}
+
+.nav-bar a:nth-child(2):hover{
+  transition: all 0.5s ease-in-out;
+  background-color:inherit;
+  color: grey;
+  border: 1px solid grey;
 }
 
 .content{
@@ -49,9 +63,80 @@ body{
   color: #373737;
 }
 
+.preview-blogs a{
+  text-decoration: none;
+}
 .preview-blogs:hover{
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* blog details */
+.blog-details button{
+  background-color: grey;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+/* form page */
+.blog-form{
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.blog-form form{
+  margin-top: 40px;
+}
+
+.blog-form label{
+  display: block;
+  font-weight: 800;
+  font-size: larger;
+  margin: 10px 0;
+}
+
+.blog-form h2{
+  position: absolute;
+  top: -30px;
+  right: 80px;
+}
+.blog-form input, textarea{
+  padding: 10px;
+  width: 120%;
+  border-radius: 4px;
+  background-color:#f5f1f1;
+  border-color: grey;
+}
+.blog-form textarea{
+  height: 80px;
+}
+
+.blog-form button{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: grey;
+  color: white;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.blog-form button:hover{
+  transition: all 0.5s ease-in-out;
+  padding: 15px 30px;
+}
+
+.blog-form .error-border{
+  border: 1px solid red;
+}
+
 .footer{
+  margin-top: 100px;
   text-align: center;
 }
